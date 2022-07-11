@@ -1,0 +1,1 @@
+<span>&copy; 2018 The Coca-Cola Company,  「陽光」 is a registered trademark of The Coca-Cola Company.</span>

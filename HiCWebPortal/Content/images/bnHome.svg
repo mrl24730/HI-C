@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="26px" viewBox="0 0 28 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>baseline-home-24px</title>
+    <desc>Created with Sketch.</desc>
+    <g id="normal" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="select-s1-pick" transform="translate(-12.000000, -59.000000)">
+            <g id="header-logo" transform="translate(0.000000, 40.000000)">
+                <g id="baseline-home-24px" transform="translate(8.000000, 15.000000)">
+                    <path d="M15,30 L15,22 C15,21.4477153 15.4477153,21 16,21 L20,21 C20.5522847,21 21,21.4477153 21,22 L21,30 L27.5,30 C28.0522847,30 28.5,29.5522847 28.5,29 L28.5,18 L30.3940418,18 C30.9463265,18 31.3940418,17.5522847 31.3940418,17 C31.3940418,16.7165135 31.2737204,16.4463483 31.0630065,16.2567059 L18.6689647,5.10206826 C18.2886598,4.75979379 17.7113402,4.75979379 17.3310353,5.10206826 L4.9369935,16.2567059 C4.52648347,16.6261649 4.49320506,17.2584547 4.86266408,17.6689647 C5.05230656,17.8796786 5.32247172,18 5.60595823,18 L7.5,18 L7.5,29 C7.5,29.5522847 7.94771525,30 8.5,30 L15,30 Z" id="Path" fill="#FFFFFF"></path>
+                    <polygon id="Path" points="0 0 36 0 36 36 0 36"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

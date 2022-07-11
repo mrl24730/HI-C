@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html lang="en" id="form">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=750">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="有心聲想講又開不了口? 參加「陽光幫你發聲」網上遊戲活動，立即向你嘅目標傳心聲啦!">
+  <meta property="og:title" content="「陽光」 幫你發聲">
+  <meta property="og:description" content="有心聲想講又開不了口? 參加「陽光幫你發聲」網上遊戲活動，立即向你嘅目標傳心聲啦!">
+  <meta property="og:image" content="@(ViewBag.domain)/Content/images/hic-share.jpg" />
+  
+  <title>陽光 | 幫你發聲</title>
+  <link rel="stylesheet" href="/Content/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/Content/css/animate.css">
+  <link rel="stylesheet" href="/Content/css/icomoon.css">
+  <link rel="stylesheet" href="/Content/css/style.css?v=83929">
+</head>
+<body>
+
+  <header class="header">
+    <!-- <div class="container-fluid"> -->
+      <div class="row no-gutters">
+        <div class="col-12 text-center">
+          <a class="btn-home" href="/home"><img class="w-100" src="/Content/images/bnHome.svg" alt=""></a>
+          <img src="/Content/images/main_header.jpg">
+        </div>
+        <div class="col-12 text-center step-wrapper">
+          <span class="header-step step1 "> <span class="icon icon-number"></span> 揀心聲 </span>
+          <span class="header-step step1 "><span class="icon icon-play3"></span></span>
+
+          <span class="header-step step2 active"> <span class="icon icon-number2"></span> 輸入資料 </span>
+          <span class="header-step step2 active"><span class="icon icon-play3"></span></span>
+
+          <span class="header-step step3"> <span class="icon icon-number3"></span> 確認 </span>
+          <span class="header-step step3 "><span class="icon icon-play3"></span></span>
+
+          <span class="header-step step4"> <span class="icon icon-number3"></span> 送給目標 </span>
+        </div>
+      </div>
+    <!-- </div> -->
+  </header>
+
+  <main class="container-fluid input-wrapper">
+
+    <div class="form-page">
+
+      <form id="msgform">
+        <input type="hidden" id="year" name="year" value="">
+        <input type="hidden" id="month" name="month" value="">
+        <input type="hidden" id="day" name="day" value="">
+
+        <div class="d-flex justify-content-center form-group">
+          <input type="text" class="form-control d-block" id="sender" name="sender" placeholder="輸入你嘅名 (20字內)" maxlength="20">
+        </div>
+        <span class="error-hint sender d-none"><span class="icon-notification"></span> 唔填名想做神秘人？畀少少提示吖</span>
+        <span class="error-hint sender-2 d-none">
+          <span class="icon-notification"></span>
+          你嘅名有不雅字符 "<span class="word"></span>" 呀
+        </span>
+        
+        <div class="d-flex justify-content-center form-group">
+          <input type="text" class="form-control d-block" id="receiver" name="receiver" placeholder="接收人嘅名 (20字內)" maxlength="20">
+        </div>
+        <span class="error-hint receiver d-none"><span class="icon-notification"></span> 唔知佢咩名？形容下佢都得㗎</span>
+        <span class="error-hint receiver-2 d-none">
+          <span class="icon-notification"></span>
+          接收人嘅名有不雅字符 "<span class="word"></span>" 呀
+        </span>
+
+        <div class="d-flex justify-content-center form-group">
+          <input type="text" class="form-control d-block" id="passcode" name="passcode" placeholder="自定心聲密碼 (20字內)" maxlength="20">
+        </div>
+        <span class="error-hint passcode d-none"><span class="icon-notification"></span> 你唔記得填心聲密碼，快啲填返喇</span>
+        <span class="error-hint passcode-2 d-none"><span class="icon-notification"></span> 可惜呀，呢個密碼已經有人用</span>
+        <span class="error-hint passcode-3 d-none">
+          <span class="icon-notification"></span>
+          心聲密碼有不雅字符 "<span class="word"></span>" 呀
+        </span>
+        <span class="error-hint custom d-none"><span class="icon-notification"></span> 心聲密碼長度為3-20和只限英文及數字</span>
+
+        <div class="rcmd-wrapper d-none">
+          <span class="d-flex justify-content-center feedback">不妨考慮下:</span>
+          <div class="form-check d-flex justify-content-center passcode-rcmd">
+            <input class="form-check-input" type="radio" name="recommendation" id="recommendation1">
+            <label class="form-check-label" for="recommendation1">
+              B5201314
+            </label>
+          </div>
+          <div class="form-check d-flex justify-content-center passcode-rcmd">
+            <input class="form-check-input" type="radio" name="recommendation" id="recommendation2">
+            <label class="form-check-label" for="recommendation2">
+              C5201314
+            </label>
+          </div>
+          <div class="form-check d-flex justify-content-center passcode-rcmd">
+            <input class="form-check-input" type="radio" name="recommendation" id="recommendation3">
+            <label class="form-check-label" for="recommendation3">
+              Y5201314
+            </label>
+          </div>
+        </div>
+      </form>
+
+      <figure class="audio-wrapper">
+        <div>
+          <div class="audio-outer">
+          <audio class="d-flex justify-content-center" controls src="">
+            Your browser does not support the <code>audio</code> element.
+          </audio>
+          </div>
+          <figcaption class="audio-desc d-flex justify-content-start">Loading...</figcaption>
+          <figcaption class="audio-author d-flex justify-content-start">
+            <span>Loading...</span>
+            <img id="refresh" class="d-none" src="/Content/images/btn_pick.svg">
+          </figcaption>
+        </div>
+      </figure>
+
+      <div class="action-container">
+        <div class="row d-flex justify-content-center submit-wrapper">
+          <button id="submit" class="btn btn-green">送出</button>
+        </div>
+
+        <div class="row d-flex justify-content-center back-wrapper">
+          <a href="/home/pick">
+            <button class="btn btn-grey">再揀過</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="action-container rcmd-wrapper mt-4 d-none">
+        <div class="row d-flex justify-content-center submit-wrapper">
+          <button id="retry" class="btn btn-green">再試一次</button>
+        </div>
+      </div>
+
+
+      <div class="confirm-wrapper d-none">
+        
+        <!--
+        <div class="row text-left" style="padding:20px 78px; font-size: 36px">
+          <div class="col-12">出生日期:</div>
+          <div class="col-6">
+            <select style="width: 100%;" name="yy" id="yy"></select>
+          </div>
+          <div class="col-3">
+            <select style="width: 100%;" name="mm" id="mm"></select>
+          </div>
+          <div class="col-3">
+            <select style="width: 100%;" name="dd" id="dd"></select>
+          </div>
+        </div>
+        <span class="error-hint dob d-none"><span class="icon-notification"></span> 生日日期唔正確喎!</span>
+        -->
+
+        <div class="form-check text-center my-4">
+          <input class="form-check-input" type="checkbox" value="" id="agree">
+          <label class="form-check-label" for="agree">
+            我已閱讀及同意<a href="#" data-toggle="modal" data-target="#tncModal">活動條款及細則</a>
+          </label>
+        </div>
+        <div class="row d-flex justify-content-center confirm-wrapper">
+          <button id="confirm" class="btn btn-green">確認送出</button>
+        </div>
+        <div class="row">
+          <div class="col-12 py-3">
+            <a style="font-size: 28px; text-decoration: underline; color: #000;" href="https://www.coca-cola.hk/about-us/website-policy" target="_blank">網站私隱政策</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ready-page d-none">
+      <span class="d-flex justify-content-center ready-desc m-auto">你嘅心聲已經準備就緒！立即將心聲密碼寫喺「陽光」包裝上面，交畀你嘅目標人物喇！</span>
+
+      <div class="banner-wrapper d-flex justify-content-center">
+        <img src="/Content/images/finish_kv.jpg">
+        <span class="ani-passcode animated tada infinite"></span>
+      </div>
+
+      <div class="pass-wrapper justify-content-center m-auto text-center">
+        由&nbsp;<span class="from d-inline-block">John Doe</span>&nbsp;畀&nbsp;<span class="to d-inline-block">Mary Chan</span>&nbsp;心聲密碼&nbsp;<span class="passcode d-inline-block">C5201314</span>
+      </div>
+
+      <figure class="audio-wrapper">
+        <div>
+          <div class="audio-outer">
+          <audio class="d-flex justify-content-center" controls src="">
+            Your browser does not support the <code>audio</code> element.
+          </audio>
+          </div>
+          <figcaption class="audio-desc d-flex justify-content-start">如果剩返最後一首歌，我希望會係一首屬於你同我嘅歌</figcaption>
+          <figcaption class="audio-author d-flex justify-content-start">
+            <span>森美</span>
+          </figcaption>
+        </div>
+      </figure>
+
+      <div class="row d-flex justify-content-center facebook-wrapper">
+        <a class="btn-FbShare" href="javascript:void(0);">
+          <button class="btn btn-blue btn-ga" data-cat="Thx Page" data-action="Share to FB"><img src="/Content/images/btn_share.svg">分享此遊戲至Facebook</button>
+        </a>
+      </div>
+
+      <div class="row d-flex justify-content-center">
+        <a href="https://www.facebook.com/yeunggwong/" target="_blank">
+          <button class="btn btn-blue btn-ga" data-cat="Thx Page" data-action="Go to Fan Page"><img src="/Content/images/btn_facebook.svg">前往陽光Facebook</button>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer container-fluid d-flex justify-content-center">
+    <span>&copy; 2019 The Coca-Cola Company,  「陽光」 is a registered trademark of The Coca-Cola Company.</span>
+  </footer>
+
+
+
+  <div id="tncModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">「陽光幫你發聲」活動條款及細則</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>於2019年4月22日至7月31日期間購買「陽光」飲品，掃描印於包裝上的QR碼，即可參加由可口可樂中國有限公司（下稱「主辦商」）主辦的「陽光幫你發聲」網上遊戲活動（下稱「活動」）。</li>
+          <li>活動只限年滿13歲之香港居民（有效香港特別行政區身份証之持有人）參加。是次活動只適用於香港及澳門地區。每人參加次數則不限。活動將於2018年7月31日23時59分截止（以主辦商之時鐘為準）。</li>
+          <li>參加者須於指定遊戲活動網站上輸入自訂密碼及自訂稱號。 主辦商僅於參加者自願提供個人資料予主辦商時向參加者收集個人資料。參加者所提供之個人資料僅供是次活動用途，主辦商會根據其就《個人資料（私隱）條例 》所擬定的政策處理，有關政策及活動詳細內容，請瀏覽網站：www.coca-cola.hk。</li>
+          <li>主辦商可與是次活動的第三方贊助商分享該參加者的個人資料，或根據適用的規則分享該個人資料。</li>
+          <li>第三方服務供應商：主辦商與提供服務（包括網站主管、數據分析、通信服務、推廣活動以及其他行政服務）的第三方合作此活動。主辦商可與該等第三方分享參加者的個人資料，以使該等第三方能提供有關服務。</li>
+          <li>給家長的特別備註：主辦商根據適用法例及指引認真履行保護13歲以下兒童個人資料的責任。主辦商將特別指導兒童不要於是次活動提供個人資料或試圖作出登記。</li>
+          <li>更新參加者的資料及聯絡主辦商：主辦商已設立程序保持參加者個人資料的準確、完整及更新，以供收集及使用個人資料的目的之用。參加者可查看我們所收集的資料，並在適當情況下可要求移除或糾正有關資料。參加者有意查看, 移除或更改其個人資料，請將要求發送至：香港鰂魚涌英皇道979號 太古坊康橋大廈24 樓 可口可樂中國有限公司。</li>
+          <li>若參加者訂密碼及自訂稱號含有不雅字眼、粗言穢語、誹謗、違法等不恰當的內容，主辦商有權刪除留言及取消參加者資格而無需另行通知。</li>
+          <li>所有自訂密碼均具有風險及有機會被第三方猜中，參加者的自訂稱號有機會被第三方查閱。參加者必須衡量風險並同意自行承擔所有風險及責任。</li>
+          <li>在是次活動中，當收件人確認接受信息後，信息將會在24小時內被隱藏。屆時，信息將不能被查閱。所有活動信息將會在活動完結後的6個月內被刪除。</li>
+          <li>參加者所輸入的資料將不可更改。</li>
+          <li>本活動如有任何因電腦、網路、電話、技術或其他不可歸責於主辦商之事由，而使參加者或主辦商寄出或登錄之資料有遺失、錯誤、無法辨識或毀損，導致資料無效之情況，主辦商不負任何法律責任，參加者均不得異議。</li>
+          <li>參加者每次利用手提電話瀏覽是次活動網站，其手提電話網絡供應商收取之費用，將由參加者繳付，收費詳情可向其手提電話網絡供應商查詢。</li>
+          <li>參加者於參加活動之同時，即代表同意接受活動之條款及細則約束，如有違反，主辦商有權取消參加者之參加資格，並對於任何破壞活動之行為保留法律追訴權。主辦商保留刪除任何涉及意識不良或不恰當內容的權利，以及取消任何違反以上條款之參加者的參賽或得獎資格，有關內容包括但不限於涉及色情、暴力、淫褻、不雅、粗言穢語、誹謗、影射、煽動他人、威嚇、侵害他人私隱等。參加者乃自願參與本活動並同意自行承擔所有風險及責任。</li>
+          <li>本活動網站可能包含非主辦商所有或控制的第三方網站的鏈接。 主辦商無法控制任何第三方網站的內容、條款及細則及隱私政策。因此，主辦商並不承擔任何責任。 此外，主辦商也不會審查或編輯任何第三方網站的內容。 使用本活動網站即表示您明確免除主辦商因使用任何第三方網站而產生的任何和所有責任。因此，主辦商建議參加者在離開本活動網站時了解並閱讀參加者訪問的三方網站網站的條款及細則以，及隱私政策。</li>
+          <li>以上條款及細則以主辦商解讀為準。如有任何爭議，主辦商保留最終決定權。</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">關閉</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="/Content/js/jquery-3.3.1.min.js"></script>
+<script src="/Content/js/filter.js"></script>
+<script src="/Content/js/popper.min.js"></script>
+<script src="/Content/js/bootstrap.min.js"></script>
+<script src="/Content/js/jquery.cookie.js"></script>
+<script src="/Content/js/analyticstracking.js"></script>
+<script src="/Content/js/fbController.js"></script>
+<script src="/Content/js/moment.min.js"></script>
+<script src="/Content/js/json.js"></script>
+<script src="/Content/js/uifn.js?v=83929"></script>
+<script src="/Content/js/form.js?v=83929"></script>
+<!--
+<script>
+  for(var i = 2019; i> 1900; i--){
+    var op = $("<option/>");
+    op.val(i).text(i);
+    $("#yy").append(op);
+  }
+
+  for(var i = 1; i<= 12; i++){
+    var op = $("<option/>");
+    op.val(i).text(i);
+    $("#mm").append(op);
+  }
+
+  for(var i = 1; i<= 31; i++){
+    var op = $("<option/>");
+    op.val(i).text(i);
+    $("#dd").append(op);
+  }
+</script>
+  -->
+
+</body>
+</html>

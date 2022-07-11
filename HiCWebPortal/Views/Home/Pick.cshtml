@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en" id="pick">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=750">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="有心聲想講又開不了口? 參加「陽光幫你發聲」網上遊戲活動，立即向你嘅目標傳心聲啦!">
+  <meta property="og:title" content="「陽光」 幫你發聲">
+  <meta property="og:description" content="有心聲想講又開不了口? 參加「陽光幫你發聲」網上遊戲活動，立即向你嘅目標傳心聲啦!">
+  <meta property="og:image" content="@(ViewBag.domain)/Content/images/hic-share.jpg" />
+  <title>Hi-C | 幫你發聲</title>
+  <link rel="stylesheet" href="/Content/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/Content/css/icomoon.css">
+  <link rel="stylesheet" href="/Content/css/style.css?v=4930">
+</head>
+<body>
+
+  <header class="header">
+    <!-- <div class="container-fluid"> -->
+      <div class="row no-gutters">
+        <div class="col-12 text-center">
+          <a class="btn-home" href="/home"><img class="w-100" src="/Content/images/bnHome.svg" alt=""></a>
+          <img src="/Content/images/main_header.jpg">
+        </div>
+        <div class="col-12 text-center step-wrapper">
+          <span class="header-step step1 active"> <span class="icon icon-number"></span> 揀心聲 </span>
+          <span class="header-step step1 active"><span class="icon icon-play3"></span></span>
+          <span class="header-step step2"> <span class="icon icon-number2"></span> 輸入資料 </span>
+          <span class="header-step step2"><span class="icon icon-play3"></span></span>
+          <span class="header-step step3"> <span class="icon icon-number3"></span> 確認 </span>
+          <span class="header-step step3"><span class="icon icon-play3"></span></span>
+          <span class="header-step step4"> <span class="icon icon-number3"></span> 送給目標 </span>
+        </div>
+      </div>
+    <!-- </div> -->
+  </header>
+
+  <main class="container-fluid input-wrapper">
+    <form>
+      <div class="d-flex justify-content-center form-group">
+        <select class="form-control custom-select" id="classify">
+          <option value="all">全部</option>
+          <option value="lover">同鐘意嘅人講</option>
+          <option value="mama">同媽媽講 / 同仔女講</option>
+          <option value="dad">同阿爸講 / 同仔女講</option>
+          <option value="hkdse" selected="">同同學講</option>
+          <!--
+          <option value="friend">同老友講</option>
+          <option value="random">隨機幫我揀</option>
+          -->
+        </select>
+      </div>
+      <div class="form-check m-auto">
+        <div class="float-right">
+          <div class="form-check-inline">
+            <input class="form-check-input" type="checkbox" value="audio" id="mediatype1" checked="checked">
+            <label class="form-check-label" for="mediatype1">
+              語音
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <input class="form-check-input" type="checkbox" value="text" id="mediatype2" checked="checked">
+            <label class="form-check-label" for="mediatype2">
+              文字
+            </label>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <hr id="divider" class="styled-divider">
+
+    <figure id="media-content-audio" class="media-content audio-wrapper d-none">
+      <div>
+        <div class="audio-outer">
+          <audio class="d-flex justify-content-center" controls src="/Content/audio/lover_01.wav" data-audio="a01">
+            Your browser does not support the <code>audio</code> element.
+          </audio>
+        </div>
+        <figcaption class="audio-desc d-flex justify-content-start">如果剩返最後一首歌，我希望會係一首屬於你同我嘅歌</figcaption>
+        <figcaption class="audio-author d-flex justify-content-start">森美</figcaption>
+      </div>
+
+      <a href="/home/form?id=a01">
+        <button class="btn btn-green d-flex justify-content-center m-auto">揀呢個心聲</button>
+      </a>
+    </figure>
+
+    <figure id="media-content-text" class="media-content text-wrapper d-none">
+      <div>
+        <figcaption class="text-desc d-flex justify-content-start" data-text="t01">如果剩返最後一首歌，我希望會係一首屬於你同我嘅歌</figcaption>
+      </div>
+
+      <a href="/home/form?id=t01">
+        <button class="btn btn-green d-flex justify-content-center m-auto">揀呢個心聲</button>
+      </a>
+    </figure>
+
+  </main>
+
+  <footer class="footer container-fluid d-flex justify-content-center">
+    <span>&copy; 2019 The Coca-Cola Company,  「陽光」 is a registered trademark of The Coca-Cola Company.</span>
+  </footer>
+
+  <script src="/Content/js/jquery-3.3.1.min.js"></script>
+  <script src="/Content/js/popper.min.js"></script>
+  <script src="/Content/js/bootstrap.min.js"></script>
+  <script src="/Content/js/jquery.cookie.js"></script>
+  <script src="/Content/js/jsonToDom.js"></script>
+  <script src="/Content/js/fbController.js"></script>
+  <script src="/Content/js/json.js?v=4930"></script>
+  <script src="/Content/js/analyticstracking.js"></script>
+  <script src="/Content/js/pick.js?v=4930"></script>
+</body>
+</html>

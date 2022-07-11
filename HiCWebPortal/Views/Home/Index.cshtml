@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en" id="index">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=750">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="有心聲想講又開不了口? 參加「陽光幫你發聲」網上遊戲活動，立即向你嘅目標傳心聲啦!">
+  <meta property="og:title" content="「陽光」 幫你發聲">
+  <meta property="og:description" content="有心聲想講又開不了口? 參加「陽光幫你發聲」網上遊戲活動，立即向你嘅目標傳心聲啦!">
+  <meta property="og:image" content="@(ViewBag.domain)/Content/images/hic-share.jpg" />
+  <title>Hi-C | 幫你發聲</title>
+  <link rel="stylesheet" href="/Content/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/Content/css/icomoon.css">
+  <link rel="stylesheet" href="/Content/css/style.css?v=838922">
+</head>
+<body>
+  
+  <header class="header d-none">
+    <!-- <div class="container-fluid"> -->
+      <div class="row no-gutters">
+        <div class="col-12 text-center">
+          <img src="/Content/images/main_header.jpg">
+        </div>
+      </div>
+    <!-- </div> -->
+  </header>
+
+  <div class="bubble-centraliser">
+    <div class="bubble-wrapper d-none">
+      <div class="bubble-top"></div>
+      <div class="bubble-middle">
+        <span class="form">John Doe</span> 傳心聲畀 <span class="to">Mary Chan</span>
+      </div>
+      <div class="bubble-bottom"></div>
+    </div>
+  </div>
+
+  <main class="container-fluid input-wrapper">
+
+    <div class="index-page">
+      <div class="row d-flex justify-content-center">
+        <a class="btn-yellow btn-ga" data-cat="Home Page" data-action="傳心聲 clicked" href="/home/pick"> 傳心聲 </a>
+      </div>
+      <hr class="styled-divider">
+      
+      <div class="recipient-step1">
+        <div class="row d-flex justify-content-center">
+          <a id="btn-recipient" class="btn-yellow btn-ga" data-cat="Home Page" data-action="聽心聲 clicked" href="#" >聽心聲</a>
+        </div>
+      </div>
+      
+      <div class="d-none recipient-step2">
+        <div class="row d-flex justify-content-center form-group">
+          <input type="text" id="passcode" class="form-control d-block" placeholder="輸入心聲密碼">
+        </div>
+        <div class="row d-flex justify-content-center">
+          <button id="btn-submit" class="btn-yellow">即刻聽心聲</button>
+        </div>
+        <div class="text-center">
+          <span class="error-hint my-3 d-none">
+            <span class="icon-notification"></span> 你嘅心聲密碼可能唔正確，或者已過期喎!
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sent-page d-none">
+      <figure class="audio-wrapper">
+        <div>
+          <div class="audio-outer">
+            <audio class="d-flex justify-content-center" controls src="">
+              Your browser does not support the <code>audio</code> element.
+            </audio>
+          </div>
+          <figcaption class="audio-desc d-flex justify-content-start">Loading...</figcaption>
+          <figcaption class="audio-author d-flex justify-content-start">Loading...</figcaption>
+        </div>
+      </figure>
+
+      
+      <div class="row d-flex justify-content-center my-3">
+        <span class="cta-txt">啱唔啱聽先? 不如你都買返包「陽光」，Send返心聲俾佢啦!</span>
+        <a href="/home/pick">
+          <button class="btn btn-green btn-ga" data-cat="Recipient Page" data-action="Reply now">揀心聲回覆</button>
+        </a>
+      </div>
+
+      <div class="row d-flex justify-content-center facebook-wrapper">
+        <a class="btn-FbShare" href="javascript:void(0);">
+          <button class="btn btn-blue btn-ga" data-cat="Recipient Page" data-action="Share to FB"><img src="/Content/images/btn_share.svg">分享此遊戲至Facebook</button>
+        </a>
+      </div>
+
+      <div class="row">
+        <div class="col text-center txt-delete">
+          (呢個心聲會喺24小時之後自動刪除)
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer container-fluid d-flex justify-content-center text-center">
+    <span>&copy; 2019 The Coca-Cola Company,  「陽光」 is a registered trademark of The Coca-Cola Company.</span>
+  </footer>
+
+  <script src="/Content/js/jquery-3.3.1.min.js"></script>
+  <script src="/Content/js/popper.min.js"></script>
+  <script src="/Content/js/bootstrap.min.js"></script>
+  <script src="/Content/js/jquery.cookie.js"></script>
+  <script src="/Content/js/analyticstracking.js"></script>
+  <script src="/Content/js/fbController.js"></script>  
+  <script src="/Content/js/json.js"></script>
+  <script src="/Content/js/uifn.js?v=838922"></script>
+  <script src="/Content/js/index.js?v=838922"></script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3175FC1F-DB25-48F1-B766-7F2EF0A6E288}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebPortal</RootNamespace>
+    <AssemblyName>WebPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.5\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\images\01_main.png" />
+    <Content Include="Content\images\02_bubble.png" />
+    <Content Include="Content\images\02_bubble_mob.png" />
+    <Content Include="Content\images\02_formula.png" />
+    <Content Include="Content\images\02_wavePttn.png" />
+    <Content Include="Content\images\05_bg_txtFrame.png" />
+    <Content Include="Content\images\05_bn_callMeLAter.png" />
+    <Content Include="Content\images\05_bn_start.png" />
+    <Content Include="Content\images\05_iphone.png" />
+    <Content Include="Content\images\05_uncleSiuHotline.png" />
+    <Content Include="Content\images\06_bn_downloadCouponw_watson.png" />
+    <Content Include="Content\images\06_bn_downloadCoupon_mannings.png" />
+    <Content Include="Content\images\06_keyV.png" />
+    <Content Include="Content\images\background\bg_01.jpg" />
+    <Content Include="Content\images\background\bg_02.jpg" />
+    <Content Include="Content\images\background\bg_03.jpg" />
+    <Content Include="Content\images\background\bg_04.jpg" />
+    <Content Include="Content\images\background\bg_05.jpg" />
+    <Content Include="Content\images\background\bg_06.jpg" />
+    <Content Include="Content\images\bn_checkBox_check.png" />
+    <Content Include="Content\images\bn_checkBox_uncheck.png" />
+    <Content Include="Content\images\bn_form_submit.png" />
+    <Content Include="Content\images\bubble\03_bubble01.png" />
+    <Content Include="Content\images\bubble\03_bubble02.png" />
+    <Content Include="Content\images\bubble\03_bubble03.png" />
+    <Content Include="Content\images\bubble\03_bubble04.png" />
+    <Content Include="Content\images\bubble\03_bubble05.png" />
+    <Content Include="Content\images\bubble\03_bubble06.png" />
+    <Content Include="Content\images\bubble\03_bubble07.png" />
+    <Content Include="Content\images\dt_05_uncleSiuHotline_callBack.png" />
+    <Content Include="Content\images\dt_divider_05_hotlinePopUp.png" />
+    <Content Include="Content\images\extraMoist_comingSoon.jpg" />
+    <Content Include="Content\images\fb_SenkaShareMessage.jpg" />
+    <Content Include="Content\images\form_header_kv.jpg" />
+    <Content Include="Content\images\icon\bn_mob_close.png" />
+    <Content Include="Content\images\icon\bn_mob_menu.png" />
+    <Content Include="Content\images\icon\icAquaStory.svg" />
+    <Content Include="Content\images\icon\icCoupon.svg" />
+    <Content Include="Content\images\icon\icHome.svg" />
+    <Content Include="Content\images\icon\icLogo.svg" />
+    <Content Include="Content\images\icon\icMask.svg" />
+    <Content Include="Content\images\icon\icUncleSiu.svg" />
+    <Content Include="Content\images\icon\icWinningList.svg" />
+    <Content Include="Content\images\icon\ic_bulletPoint.png" />
+    <Content Include="Content\images\icon\social_fb.png" />
+    <Content Include="Content\images\img_form_hotlineRegSuccess.png" />
+    <Content Include="Content\images\img_form_trialRegSuccess.png" />
+    <Content Include="Content\images\img_popUp.png" />
+    <Content Include="Content\images\mask01_luminous.png" />
+    <Content Include="Content\images\mask02_extraMoist.png" />
+    <Content Include="Content\images\mask03_perfectWhip.png" />
+    <Content Include="Content\images\mob_01_main.png" />
+    <Content Include="Content\images\mob_05_uncleSiuHotline_callBack.png" />
+    <Content Include="Content\images\mob_divider_05_hotlinePopUp.png" />
+    <Content Include="Content\images\text\04_videoTitle_extraMoist.png" />
+    <Content Include="Content\images\text\04_videoTitle_luminous.png" />
+    <Content Include="Content\images\text\dt_maskTitle01_luminous.png" />
+    <Content Include="Content\images\text\dt_maskTitle02_extraMoist.png" />
+    <Content Include="Content\images\text\dt_maskTitle03_perfectWhip.png" />
+    <Content Include="Content\images\text\dt_title_02_formula.png" />
+    <Content Include="Content\images\text\dt_title_04_AquaTime.png" />
+    <Content Include="Content\images\text\dt_title_05_hotline.png" />
+    <Content Include="Content\images\text\dt_title_06_coupon.png" />
+    <Content Include="Content\images\text\form_title.png" />
+    <Content Include="Content\images\text\mob_maskTitle01_luminous.png" />
+    <Content Include="Content\images\text\mob_maskTitle02_extraMoist.png" />
+    <Content Include="Content\images\text\mob_maskTitle03_perfectWhip.png" />
+    <Content Include="Content\images\text\mob_title_02_formula.png" />
+    <Content Include="Content\images\text\mob_title_04_AquaTime.png" />
+    <Content Include="Content\images\text\mob_title_05_hotline.png" />
+    <Content Include="Content\images\text\mob_title_06_coupon.png" />
+    <Content Include="findstuffs\Decrypt.aspx" />
+    <Content Include="findstuffs\EncryptSQL.aspx" />
+    <Content Include="findstuffs\GetRecordForm.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Common\API\ApiResponse.cs" />
+    <Compile Include="Common\DB\DBHelper.cs" />
+    <Compile Include="Common\API\StatusCode.cs" />
+    <Compile Include="Common\API\MessageManager.cs" />
+    <Compile Include="Common\DB\AdminRepository.cs" />
+    <Compile Include="Common\DB\MessaageRepository.cs" />
+    <Compile Include="Common\DB\Message.cs" />
+    <Compile Include="Common\DB\SettingRepository.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\FindStuffsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\TeaserController.cs" />
+    <Compile Include="findstuffs\Decrypt.aspx.cs">
+      <DependentUpon>Decrypt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="findstuffs\Decrypt.aspx.designer.cs">
+      <DependentUpon>Decrypt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="findstuffs\EncryptSQL.aspx.cs">
+      <DependentUpon>EncryptSQL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="findstuffs\EncryptSQL.aspx.designer.cs">
+      <DependentUpon>EncryptSQL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="findstuffs\GetRecordForm.aspx.cs">
+      <DependentUpon>GetRecordForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="findstuffs\GetRecordForm.aspx.designer.cs">
+      <DependentUpon>GetRecordForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MessageAPIModel.cs" />
+    <Compile Include="Models\MessageSubmitFormModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="Content\css\style.css.map" />
+    <Content Include="Content\css\style.scss" />
+    <Content Include="Content\images\Senka_ECoupon_2018_mannings.pdf" />
+    <Content Include="Content\images\Senka_ECoupon_2018_watsons.pdf" />
+    <None Include="packages.config" />
+    <Content Include="Views\Home\Pick.cshtml" />
+    <Content Include="Views\Home\Form.cshtml" />
+    <Content Include="Views\Teaser\Index.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Admin\" />
+    <Folder Include="Views\FindStuffs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\hk.kitchen\Kitchen.csproj">
+      <Project>{be6f2db5-0fba-417a-845b-01c91eb886d4}</Project>
+      <Name>Kitchen</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54435</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54435/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
